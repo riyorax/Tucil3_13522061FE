@@ -1,12 +1,6 @@
 import React from "react";
 
-const MethodComponent = ({}) => {
-  const [selectedMethod, setSelectedMethod] = useState("UCS");
-  const methodOptions = [
-    { value: "UCS", text: "UCS" },
-    { value: "GBFS", text: "GBFS" },
-    { value: "A*", text: "A*" },
-  ];
+const MethodComponent = ({ labelId, selectId, options, onMethodChange }) => {
   return (
     <div className="method-container">
       <label id={labelId}>Method</label>
