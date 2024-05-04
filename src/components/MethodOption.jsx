@@ -8,9 +8,8 @@ const MethodComponent = ({}) => {
     { value: "A*", text: "A*" },
   ];
   return (
-    <>
     <div className="method-container">
-      <label id="method-title"}>Method</label>
+      <label id={labelId}>Method</label>
       <select id={selectId} onChange={(e) => setSelectedMethod(e.target.value)}>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
@@ -19,7 +18,6 @@ const MethodComponent = ({}) => {
         ))}
       </select>
     </div>
-    </>
   );
 };
 

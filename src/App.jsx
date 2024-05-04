@@ -8,7 +8,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <MethodOption />
+      {/* <WordContainer word={"cat"} matchWord={"cog"} /> */}
     </div>
   );
 }
