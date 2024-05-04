@@ -1,0 +1,20 @@
+.box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #d8d4d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.box-white {
+  background-color: white;
+}
+
+.box-green {
+  background-color: #80c484;
+}
