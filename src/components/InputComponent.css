@@ -1,0 +1,31 @@
+.input-label {
+    font-family: "Inknut Antiqua", serif;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .input-box {
+    width: 100%;
+    max-width: 150px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #a2a2a2;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    outline: none;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 15px;
+  }

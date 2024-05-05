@@ -1,4 +1,5 @@
 import React from "react";
+import "./MethodComponent.css";
 
 const MethodComponent = ({ labelId, selectId, options, onMethodChange }) => {
   return (

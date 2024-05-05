@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import MethodComponent from "./MethodComponent";
-// import "./Form.css";
+import InputComponent from "./InputComponent";
+import "./Form.css";
 
 const FormComponent = ({ isLoading, setLoading }) => {
   //   const [startWord, setStartWord] = useState("");
@@ -75,7 +76,20 @@ const FormComponent = ({ isLoading, setLoading }) => {
             className="method-select"
           />
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+          <InputComponent
+            label="Start Word"
+            id="start-field"
+            autoComplete="off"
+            className="input-box"
+          />
+          <InputComponent
+            label="End Word"
+            id="end-field"
+            autoComplete="off"
+            className="input-box"
+          />
+        </div>
         <br />
         <button className="find-button" type="submit" disabled={!buttonEnabled}>
           Find!

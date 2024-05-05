@@ -1,18 +1,17 @@
 import React from "react";
 import { useState } from "react";
-import LetterBox from "./components/LetterBox";
-import WordContainer from "./components/WordContainer";
 import Solution from "./components/Solution";
-import MethodOption from "./components/MethodComponent";
 import FormComponent from "./components/Form";
+import TitleComponent from "./components/TitleComponent";
 import "./App.css";
 
 function App() {
   const [isLoading, setLoading] = useState(false);
   return (
     <div className="App">
-      {/* <WordContainer word={"cat"} matchWord={"cog"} /> */}
+      <TitleComponent title="😭 WEEPER 😭" />
       <FormComponent isLoading={isLoading} setLoading={setLoading} />
+      <Solution words={["cat", "cot", "cog", "dog"]} comparisonWord={"dog"} />
     </div>
   );
 }

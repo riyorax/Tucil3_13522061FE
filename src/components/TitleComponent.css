@@ -1,0 +1,17 @@
+.title-container {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-family: Clear Sans, Helvetica Neue, Arial, sans-serif;
+    font-size: 24px;
+    color: black;
+    margin: 0;
+  }
+  
