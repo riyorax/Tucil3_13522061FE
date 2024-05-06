@@ -4,12 +4,19 @@ import MethodComponent from "./MethodComponent";
 import InputComponent from "./InputComponent";
 import "./Form.css";
 
-const FormComponent = ({ isLoading, setLoading, onApiResponse }) => {
+const FormComponent = ({
+  setResponseReceived,
+  onApiResponse,
+  startWord,
+  setStartWord,
+  endWord,
+  setEndWord,
+  setNotInDict,
+  setLastCheckedWords,
+}) => {
   const [isDone, setIsDone] = useState(false);
   const [buttonEnabled, setButtonEnabled] = useState(true);
-  const [startWord, setStartWord] = useState("");
-  const [endWord, setEndWord] = useState("");
-  const [method, setMethod] = useState("");
+  const [method, setMethod] = useState("ucs");
 
   const methodOptions = [
     { value: "ucs", text: "UCS" },
@@ -22,15 +29,24 @@ const FormComponent = ({ isLoading, setLoading, onApiResponse }) => {
   };
 
   async function handleSubmit() {
-    if (!startWord || !endWord || startWord === endWord) {
-      alert(
-        "Input Invalid, make sure you choose the keywords from displayed card!"
-      );
+    if (!startWord || !endWord) {
+      alert("Please fill in the input field first!!");
+      return;
+    }
+    if (startWord === endWord) {
+      alert("Blud its literally the same thing");
+      return;
+    }
+    if (startWord.length !== endWord.length) {
+      alert("Bro its not the same length...");
       return;
     }
 
+    setNotInDict(null);
+    setLastCheckedWords({ startWord: "", endWord: "" });
     setButtonEnabled(false);
-    setLoading(true);
+    setResponseReceived(false);
+
     const data = {
       startWord: startWord,
       endWord: endWord,
@@ -54,7 +70,7 @@ const FormComponent = ({ isLoading, setLoading, onApiResponse }) => {
         console.error("Error:", error.message);
       })
       .finally(() => {
-        setLoading(false);
+        setResponseReceived(true);
         setButtonEnabled(true);
         setIsDone(true);
       });
