@@ -2,7 +2,7 @@ import React from "react";
 import "./InputComponent.css";
 import { useState } from "react";
 
-const InputComponent = ({ label, id }) => {
+const InputComponent = ({ label, id, value, setValue }) => {
   return (
     <>
       <div className="input-container">
@@ -15,6 +15,8 @@ const InputComponent = ({ label, id }) => {
           name={label}
           placeholder="Enter word here"
           className="input-box"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
       </div>
     </>
