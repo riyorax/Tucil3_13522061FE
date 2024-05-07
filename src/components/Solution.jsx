@@ -19,6 +19,7 @@ const Solution = ({
         runtime={runtime}
         nodeTraversed={nodeTraversed}
         pathLength={pathLength}
+        isSol={true}
       />
     </div>
   );

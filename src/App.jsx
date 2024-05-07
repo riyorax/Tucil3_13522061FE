@@ -6,7 +6,6 @@ import FormComponent from "./components/Form";
 import TitleComponent from "./components/TitleComponent";
 import NotInDictionary from "./components/NotInDictionaryComponent";
 import "./App.css";
-import { nodeModuleNameResolver } from "typescript";
 
 function App() {
   const [responseReceived, setResponseReceived] = useState(false);
@@ -80,7 +79,7 @@ function App() {
             <NoSolution
               startWord={lastCheckedWords.startWord}
               endWord={lastCheckedWords.endWord}
-              aporuntime={apiResponseData.runtime}
+              runtime={apiResponseData.runtime}
               nodeTraversed={apiResponseData.nodeTraversed}
             />
           )

@@ -10,7 +10,11 @@ const NoSolution = ({ startWord, endWord, runtime, nodeTraversed }) => {
       <WordContainer word={startWord} matchWord={endWord} />
       <WordContainer word={questionMarks} matchWord={startWord} />
       <WordContainer word={endWord} matchWord={startWord} />
-      <InformationComponent runtime={runtime} nodeTraversed={nodeTraversed} />
+      <InformationComponent
+        runtime={runtime}
+        nodeTraversed={nodeTraversed}
+        isSol={false}
+      />
     </div>
   );
 };

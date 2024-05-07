@@ -1,6 +1,11 @@
 import React from "react";
 
-const InformationComponent = ({ runtime, nodeTraversed, pathLength }) => {
+const InformationComponent = ({
+  runtime,
+  nodeTraversed,
+  pathLength,
+  isSol,
+}) => {
   return (
     <div className="information-container">
       <p>
@@ -9,9 +14,15 @@ const InformationComponent = ({ runtime, nodeTraversed, pathLength }) => {
       <p>
         <strong>Nodes Traversed:</strong> {nodeTraversed}
       </p>
-      <p>
-        <strong>Path Length:</strong> {pathLength}
-      </p>
+      {isSol ? (
+        <p>
+          <strong>Path Length:</strong> {pathLength}
+        </p>
+      ) : (
+        <p>
+          <strong>No Solution!</strong>
+        </p>
+      )}
     </div>
   );
 };
